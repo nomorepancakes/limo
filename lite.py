@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lite.ui'
 #
-# Created: Sun Dec 08 14:56:56 2013
+# Created: Sun Dec 08 15:25:53 2013
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -33,6 +33,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMaximumSize(QtCore.QSize(190, 145))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/root/lite.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setAnimated(False)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
@@ -90,9 +93,9 @@ class Ui_MainWindow(object):
         self.refresh = QtGui.QPushButton(self.centralwidget)
         self.refresh.setGeometry(QtCore.QRect(0, 120, 31, 23))
         self.refresh.setText(_fromUtf8(""))
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/root/refresh.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.refresh.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/root/refresh.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.refresh.setIcon(icon1)
         self.refresh.setIconSize(QtCore.QSize(35, 35))
         self.refresh.setFlat(True)
         self.refresh.setObjectName(_fromUtf8("refresh"))
