@@ -33,8 +33,8 @@ class Controller_Main(PyQt4.QtGui.QMainWindow, Ui_MainWindow):
 
 	def loop(self):
 		req = urllib2.Request(url, data, head)
-		beautyq = Queue.Queue()
-		threading.Thread(target=postrequest, args=(req, beautyq)).start()
+		beautyq = Queue()
+		threading.Thread(target=self.postrequest, args=(req, beautyq)).start()
 		beauty = beautyq.get()
 		ltcusd = beauty["result"]["XLTCZUSD"]
 		timenow = strftime("%H:%M:%S", localtime())

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lite.ui'
 #
-# Created: Sun Dec 08 16:39:20 2013
+# Created: Sun Dec 08 16:48:20 2013
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(200, 200, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(53, 53, 53))
+        brush = QtGui.QBrush(QtGui.QColor(134, 134, 134))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -58,7 +58,7 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(200, 200, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(53, 53, 53))
+        brush = QtGui.QBrush(QtGui.QColor(134, 134, 134))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -79,7 +79,7 @@ class Ui_MainWindow(object):
         brush = QtGui.QBrush(QtGui.QColor(200, 200, 200))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(53, 53, 53))
+        brush = QtGui.QBrush(QtGui.QColor(134, 134, 134))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -98,11 +98,15 @@ class Ui_MainWindow(object):
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         MainWindow.setPalette(palette)
+        MainWindow.setAcceptDrops(False)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/root/lite.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(_fromUtf8("background-color: rgb(53, 53, 53); color: rgb(200,200,200)"))
+        MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         MainWindow.setAnimated(False)
+        MainWindow.setDocumentMode(False)
+        MainWindow.setUnifiedTitleAndToolBarOnMac(True)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.groupBox = QtGui.QGroupBox(self.centralwidget)
@@ -141,6 +145,7 @@ class Ui_MainWindow(object):
         self.bidl.setObjectName(_fromUtf8("bidl"))
         self.refresh = QtGui.QPushButton(self.groupBox)
         self.refresh.setGeometry(QtCore.QRect(0, 130, 31, 23))
+        self.refresh.setStyleSheet(_fromUtf8("background-color:rgb(100,100,100)"))
         self.refresh.setText(_fromUtf8(""))
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/root/refresh.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -154,8 +159,10 @@ class Ui_MainWindow(object):
         font.setFamily(_fromUtf8("Open Sans"))
         font.setPointSize(10)
         self.high.setFont(font)
+        self.high.setStyleSheet(_fromUtf8("background-color:rgb(100,100,100)"))
         self.high.setMaxLength(3)
-        self.high.setFrame(True)
+        self.high.setFrame(False)
+        self.high.setAlignment(QtCore.Qt.AlignCenter)
         self.high.setObjectName(_fromUtf8("high"))
         self.last = QtGui.QLabel(self.groupBox)
         self.last.setGeometry(QtCore.QRect(30, 130, 151, 20))
@@ -167,8 +174,11 @@ class Ui_MainWindow(object):
         font.setFamily(_fromUtf8("Open Sans"))
         font.setPointSize(10)
         self.low.setFont(font)
+        self.low.setStyleSheet(_fromUtf8("background-color:rgb(100,100,100)"))
         self.low.setInputMask(_fromUtf8(""))
         self.low.setMaxLength(2)
+        self.low.setFrame(False)
+        self.low.setAlignment(QtCore.Qt.AlignCenter)
         self.low.setObjectName(_fromUtf8("low"))
         MainWindow.setCentralWidget(self.centralwidget)
 

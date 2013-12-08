@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -37,9 +40,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>53</red>
-        <green>53</green>
-        <blue>53</blue>
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
        </color>
       </brush>
      </colorrole>
@@ -102,9 +105,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>53</red>
-        <green>53</green>
-        <blue>53</blue>
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
        </color>
       </brush>
      </colorrole>
@@ -167,9 +170,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>53</red>
-        <green>53</green>
-        <blue>53</blue>
+        <red>134</red>
+        <green>134</green>
+        <blue>134</blue>
        </color>
       </brush>
      </colorrole>
@@ -221,6 +224,12 @@
     </disabled>
    </palette>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
    <string>LiteCoinz</string>
   </property>
@@ -231,8 +240,20 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(53, 53, 53); color: rgb(200,200,200)</string>
   </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
   <property name="animated">
    <bool>false</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -343,6 +364,9 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(100,100,100)</string>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -375,6 +399,9 @@
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(100,100,100)</string>
+     </property>
      <property name="text">
       <string>30</string>
      </property>
@@ -382,7 +409,10 @@
       <number>3</number>
      </property>
      <property name="frame">
-      <bool>true</bool>
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="last">
@@ -416,6 +446,9 @@
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(100,100,100)</string>
+     </property>
      <property name="inputMask">
       <string/>
      </property>
@@ -424,6 +457,12 @@
      </property>
      <property name="maxLength">
       <number>2</number>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
