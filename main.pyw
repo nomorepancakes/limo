@@ -4,7 +4,6 @@ import urllib2
 import json
 import threading
 
-from Queue import Queue
 from  lite import Ui_MainWindow
 from time import strftime, localtime
 
@@ -33,9 +32,8 @@ class Controller_Main(PyQt4.QtGui.QMainWindow, Ui_MainWindow):
 
 	def loop(self):
 		req = urllib2.Request(url, data, head)
-		beautyq = Queue.Queue()
-		threading.Thread(target=postrequest, args=(req, beautyq)).start()
-		beauty = beautyq.get()
+		result = urllib2.urlopen(req)
+		beauty = json.loads(result.read())
 		ltcusd = beauty["result"]["XLTCZUSD"]
 		timenow = strftime("%H:%M:%S", localtime())
 		ask = ltcusd["a"][0]
