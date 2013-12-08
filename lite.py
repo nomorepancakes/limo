@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lite.ui'
 #
-# Created: Sun Dec 08 15:25:53 2013
+# Created: Sun Dec 08 16:35:18 2013
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
